@@ -1,4 +1,12 @@
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/usage.statistics.xml
+
 node_modules/
+.vscode/
+
+.DS_Store
+
 npm-debug.log
 yarn-error.log
-.vscode/
