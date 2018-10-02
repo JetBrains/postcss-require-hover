@@ -10,7 +10,6 @@ More explicit support for this feature: https://drafts.csswg.org/mediaqueries/#h
 
 Tested:
 
--   IE11
 -   Chrome
 -   Safari
 -   Firefox
@@ -29,7 +28,7 @@ Tested:
 
 ```css
 .foo {
-    @media not all and (hover: none), (-ms-high-contrast: none) {
+    @media (hover: hover), (-moz-touch-enabled: 0) {
         bar:hover {
             display: block;
         }

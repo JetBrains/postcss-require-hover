@@ -2,7 +2,7 @@ var postcss = require('postcss');
 
 function wrapInMediaQuery(node) {
     return (
-        '@media not all and (hover: none), (-ms-high-contrast: none) {' +
+        '@media (hover: hover), (-moz-touch-enabled: 0) {' +
         node +
         '}'
     );
