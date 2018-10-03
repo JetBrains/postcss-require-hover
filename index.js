@@ -1,8 +1,9 @@
+/* eslint-disable max-len */
 var postcss = require('postcss');
 
 function wrapInMediaQuery(node) {
     return (
-        '@media (hover: hover), (-moz-touch-enabled: 0) {' +
+        '@media (hover: hover), (-moz-touch-enabled: 0), (-ms-high-contrast: none), (-ms-high-contrast: active) {' +
         node +
         '}'
     );
