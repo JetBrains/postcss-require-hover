@@ -9,7 +9,7 @@ function stripFormatting(string) {
 
 function run(input, output, opts) {
     return postcss([plugin(opts)])
-        .process(input)
+        .process(input, {from: undefined})
         .then(result => {
             expect(stripFormatting(result.css)).toEqual(
                 stripFormatting(output)
@@ -76,12 +76,12 @@ it('more multiple hover selectors and nonhover selectors', () => {
 	      color: #4a4a4a;
 	    }`,
         `@media (hover: hover), (-moz-touch-enabled: 0), (-ms-high-contrast: none), (-ms-high-contrast: active) {
-            .text-input:hover .text-input__label, 
+            .text-input:hover .text-input__label,
             .wrapper .modal .text-input:hover .text-input__label {
 	            color: #4a4a4a;
             }
         }
-        .text-input--focused .text-input__label, 
+        .text-input--focused .text-input__label,
         .wrapper .modal .text-input--focused .text-input__label {
 	      color: #4a4a4a;
 	    }`,

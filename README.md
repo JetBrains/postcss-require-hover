@@ -40,7 +40,7 @@ Tested:
 ## Installation
 
 ```
-npm install postcss-require-hover
+npm install postcss postcss-require-hover
 ```
 
 ## Usage
