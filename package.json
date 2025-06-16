@@ -1,6 +1,6 @@
 {
   "name": "@jetbrains/postcss-require-hover",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "description": "PostCSS plugin that wraps hover selectors in a media media that's only valid on devices that support true hover events.",
   "keywords": [
     "postcss",

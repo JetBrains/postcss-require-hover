@@ -1,5 +1,5 @@
 /* eslint-disable max-len */
-var postcss = require('postcss');
+const postcss = require('postcss');
 
 function wrapInMediaQuery(node) {
     return (
@@ -9,8 +9,9 @@ function wrapInMediaQuery(node) {
     );
 }
 
-module.exports = postcss.plugin('postcss-require-hover', function () {
-    return function (root) {
+const plugin = () => ({
+    postcssPlugin: 'postcss-require-hover',
+    Once(root) {
         root.walkRules(function (rule) {
             if (rule.selector.indexOf(':hover') !== -1) {
                 var clone = rule.clone();
@@ -33,5 +34,9 @@ module.exports = postcss.plugin('postcss-require-hover', function () {
                 }
             }
         });
-    };
+    }
 });
+
+plugin.postcss = true;
+
+module.exports = plugin;
